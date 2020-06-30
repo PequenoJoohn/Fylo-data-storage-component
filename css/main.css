@@ -1,14 +1,13 @@
 section {
     display: flex;
+    justify-content: space-evenly;
     width: 100%;
     height: 100vh;
     background-color: var(--very-dark-blue);
     background-image: url('../images/bg-desktop.png');
     background-repeat: no-repeat;
-    background-position: bottom;    
+    background-position: bottom;
     align-items: center;
-    justify-content: center;
-    /* align-content: space-around; */
 }
 
 .first {
@@ -27,7 +26,6 @@ section {
     width: 100%;
     height: 100%;
     margin-top: 25px;
-
 }
 
 .first ul li {
@@ -55,13 +53,82 @@ section {
 
 .second {
     margin-bottom: 150px;
-    background-color: var(--dark-blue);
-    border-radius: 15px;
     height: 150px;
-    padding: 2em;
-    width: 400px;
+    width: 600px;
 }
 
-.second div {
+.second .second-first {
     display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-items: flex-end;
+    justify-content: center;
+    background: #ffffff;
+    width: 250px;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+
+.second .second-first::before {
+    /* border: 10px solid transparent; */
+    /* border-right-color: #ffffff; */
+    /* content: ""; */
+    /* right: 250px; */
+    /* margin-top: 50px; */
+    /* position: absolute; */
+    /* float: right; */
+}
+
+.second .second-storage {
+    padding: 0 2em 0 2em;
+    display: block;
+    background-color: var(--dark-blue);
+    width: 65%;
+    border-radius: 15px;
+    height: 130px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+progress {
+    appearance: none;
+    background: var(--very-dark-blue);
+    border: 0;
+    border-radius: 50px;
+    width: 100%;
+    height: 15px;
+}
+
+progress::-moz-progress-bar {
+    border: 2px solid var(--very-dark-blue);
+    background-image: -webkit-linear-gradient(left, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+}
+
+progress[value]::-moz-progress-bar::before {
+    content: '80%';
+    position: absolute;
+    right: 0;
+    top: -125%;
+}
+
+progress::-moz-progress-bar::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 100%;
+    right: 10px;
+    top: 10px;
+    background-color: red;
+}
+
+.second .second-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
 }
